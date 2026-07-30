@@ -28,8 +28,6 @@ The implementation was evaluated with simulated financial profiles. The reported
 
 > **Accuracy note:** All performance figures in this repository are project evaluation results based on synthetic or simulated data. They are not production benchmarks or financial-performance guarantees.
 
-## Why This Repository Is Documentation-First
-
 The original application source code is not included in this public repository. This portfolio version documents the problem, architecture, data pipeline, model design, evaluation approach, engineering decisions, and representative system behavior.
 
 It is intended to demonstrate:
