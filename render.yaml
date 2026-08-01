@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: finpilot-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_NAME
+        value: FinPilot API
+      - key: APP_VERSION
+        value: 0.1.0
+      - key: MODEL_PATH
+        value: app/ml_artifacts/recommender.joblib
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTH_SALT
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
